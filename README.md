@@ -1,5 +1,5 @@
-# CSCI596-CUDA-Raytracing
-## Xinjie Zhu's final project of CSCI 596
+CUDA-GPU-Raytracing
+## Author: Xinjie Zhu
 
 ### What is ray tracing?
 Ray tracing is a computer graphics technique to create more realistic and beautiful images.
