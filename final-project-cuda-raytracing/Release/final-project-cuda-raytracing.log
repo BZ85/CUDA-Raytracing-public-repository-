@@ -1,0 +1,44 @@
+﻿  Compiling CUDA source file rayTracing.cu...
+  
+  C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86" -x cu   -I"C:\CSCI596\final-project-cuda-raytracing\external\imageIO" -I"C:\CSCI596\final-project-cuda-raytracing\external\jpeg-9a-win32" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include"     --keep-dir Release  -maxrregcount=0   --machine 64 --compile -cudart static    -DWIN32 -DNDEBUG -D_CONSOLE -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /O2 /FS   /MD " -Xcompiler "/FdRelease\vc143.pdb" -o C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\Release\rayTracing.cu.obj "C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu" 
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(64): warning #20091-D: a __device__ variable "d_triangles" cannot be directly read in a host function
+        cudaMemcpy(d_triangles, triangles, num_triangles * sizeof(Triangle), cudaMemcpyHostToDevice);
+                   ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(65): warning #20091-D: a __device__ variable "d_spheres" cannot be directly read in a host function
+        cudaMemcpy(d_spheres, spheres, num_spheres * sizeof(Sphere), cudaMemcpyHostToDevice);
+                   ^
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(66): warning #20091-D: a __device__ variable "d_lights" cannot be directly read in a host function
+        cudaMemcpy(d_lights, lights, num_lights * sizeof(Light), cudaMemcpyHostToDevice);
+                   ^
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(67): warning #20091-D: a __device__ variable "d_ambient_light" cannot be directly read in a host function
+        cudaMemcpy(d_ambient_light, ambient_light, 3 * sizeof(double), cudaMemcpyHostToDevice);
+                   ^
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(80): warning #20091-D: a __device__ variable "d_pixelColors" cannot be directly read in a host function
+        cudaMemcpy(pixelC, d_pixelColors, 3 * 480 * 640 * sizeof(double), cudaMemcpyDeviceToHost);
+                           ^
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(87): warning #20091-D: a __device__ variable "d_pixelColors" cannot be directly read in a host function
+        cudaFree(d_pixelColors);
+                 ^
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(88): warning #20091-D: a __device__ variable "d_triangles" cannot be directly read in a host function
+        cudaFree(d_triangles);
+                 ^
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(89): warning #20091-D: a __device__ variable "d_spheres" cannot be directly read in a host function
+        cudaFree(d_spheres);
+                 ^
+  
+C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu(90): warning #20091-D: a __device__ variable "d_lights" cannot be directly read in a host function
+        cudaFree(d_lights);
+                 ^
+  
+  rayTracing.cu
+CUDACOMPILE : nvcc error : 'cudafe++' died with status 0xC0000005 (ACCESS_VIOLATION)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\CUDA 12.6.targets(799,9): error MSB3722: The command ""C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\bin\HostX86\x86" -x cu   -I"C:\CSCI596\final-project-cuda-raytracing\external\imageIO" -I"C:\CSCI596\final-project-cuda-raytracing\external\jpeg-9a-win32" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include"     --keep-dir Release  -maxrregcount=0   --machine 64 --compile -cudart static    -DWIN32 -DNDEBUG -D_CONSOLE -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /O2 /FS   /MD " -Xcompiler "/FdRelease\vc143.pdb" -o C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\Release\rayTracing.cu.obj "C:\CSCI596\final-project-cuda-raytracing\final-project-cuda-raytracing\rayTracing.cu"" exited with code 5. Please verify that you have sufficient rights to run this command.
