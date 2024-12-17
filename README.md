@@ -1,4 +1,4 @@
-#CUDA-GPU-Raytracing
+# CUDA-GPU-Raytracing
 ## Author: Xinjie Zhu
 
 ### What is ray tracing?
